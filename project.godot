@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[FilteredLogger]
+
+Settings/LogDirectory="res://Logs/"
+Settings/LogName="Log"
+Settings/DefaultCategory="System"
+Settings/WriteToFile="True"
+Settings/WriteToC#Console="True"
+Settings/WriteToGodotConsole="True"
+
+[application]
+
+config/name="FilteredLogger"
+run/main_scene="uid://du4hsxgr8cd7e"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+FilteredLogger="*res://addons/filteredlogger/LoggingConsole.tscn"
+
+[dotnet]
+
+project/assembly_name="FilteredLogger"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/filteredlogger/plugin.cfg")

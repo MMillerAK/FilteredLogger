@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5ewnari111h2"]
+
+[ext_resource type="Script" uid="uid://dxd0dg00pfubp" path="res://addons/filteredlogger/LoggingConsole.cs" id="1_skbco"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dosku"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="LoggingConsole" type="CanvasLayer" node_paths=PackedStringArray("TabBox", "consoleLabel")]
+layer = 128
+follow_viewport_enabled = true
+script = ExtResource("1_skbco")
+TabBox = NodePath("LogViewer/VBoxContainer/LogCategories")
+consoleLabel = NodePath("LogViewer/VBoxContainer/RichTextLabel")
+
+[node name="LogViewer" type="FoldableContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_force_pass_scroll_events = false
+title = "Logs"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LogViewer"]
+layout_mode = 2
+
+[node name="LogCategories" type="HBoxContainer" parent="LogViewer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LogViewer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_dosku")
+theme_override_styles/background = SubResource("StyleBoxFlat_dosku")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dosku")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dosku")
+bbcode_enabled = true
+text = "[color=red]cvbgfdgfd[/color]"
+scroll_following = true
