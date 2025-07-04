@@ -4,7 +4,7 @@ A c# addon for Godot that enables a console that shows custom events, and allows
 It can be configured in the project settings, including the log name and folder where the log will be stored.
 It will, by default, output to the GDScript console, C# console, and 2 files(one binary blog file, one text based text file)
 
-PRessing F1 will show or hide the file.
+Pressing F1 will show or hide the file.
 
 
 
